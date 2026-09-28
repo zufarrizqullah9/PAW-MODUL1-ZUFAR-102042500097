@@ -1,0 +1,62 @@
+/* Cia Store - style.css */
+:root {
+    --ink: #000000;
+    --muted: #6b6b76;
+    --bg: #f7f8fc;
+    --card: #ffffff;
+    --line: #e6e7ee;
+    --ok: #1e8e4a;
+    --ok-bg: #e2f6e9;
+    --out: #c0392b;
+    --out-bg: #fbe4e1;
+    --radius: 16px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Segoe UI", Arial, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.5; }
+.container { width: min(1000px, 92%); margin: 0 auto; }
+
+/* Navbar */
+header { padding: 20px 0; }
+nav { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.4rem; font-weight: 700; }
+nav ul { display: flex; gap: 24px; list-style: none; }
+nav a { color: var(--ink); text-decoration: none; font-size: .9rem; }
+
+/* Hero */
+.hero { background: var(--ink); color: #fff; border-radius: 24px; padding: 64px 48px; margin-top: 16px; }
+.hero small { color: #b8b8c4; }
+.hero h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 16px 0 12px; }
+.hero p { color: #d0d0da; margin-bottom: 28px; }
+.btn-hero { display: inline-block; background: #fff; color: var(--ink); padding: 12px 22px; border-radius: 10px; font-weight: 600; text-decoration: none; }
+
+/* Info jumlah produk */
+.catalog-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin: 72px 0 24px; }
+.catalog-head small { color: var(--muted); }
+.catalog-head h2 { font-size: 2rem; }
+.total { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 10px 18px; font-size: .9rem; }
+
+/* Grid card */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; }
+.kategori { color: var(--muted); font-size: .85rem; }
+.kategori strong { color: var(--ink); font-weight: 500; }
+.card h3 { font-size: 1.3rem; margin: 2px 0 14px; }
+.harga-lama { color: #999; text-decoration: line-through; font-size: .85rem; }
+.harga { font-size: 1.5rem; font-weight: 700; }
+.harga-wrap { min-height: 66px; }
+.meta { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--line); margin: 16px 0 20px; padding-top: 16px; }
+.badge { font-size: .75rem; font-weight: 600; padding: 4px 12px; border-radius: 999px; }
+.badge.ok { background: var(--ok-bg); color: var(--ok); }
+.badge.out { background: var(--out-bg); color: var(--out); }
+.btn { margin-top: auto; width: 100%; border: 0; padding: 14px; border-radius: 10px; font-size: .95rem; font-weight: 600; cursor: pointer; background: var(--ink); color: #fff; }
+.btn:hover { background: #2c2c38; }
+.btn:disabled { background: #d5d6de; color: #8a8a95; cursor: not-allowed; }
+
+/* Footer */
+footer { margin-top: 80px; padding: 28px 0; border-top: 1px solid var(--line); text-align: center; color: var(--muted); font-size: .85rem; }
+
+@media (max-width: 600px) {
+    nav { flex-direction: column; gap: 10px; }
+    .hero { padding: 40px 24px; }
+    .catalog-head { margin-top: 48px; }
+}
